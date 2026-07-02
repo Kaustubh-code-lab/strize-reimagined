@@ -1,4 +1,54 @@
-/* Strize Fitness - Dark Theme */
+[data-animate-section] .animate-children>* {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+        transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+}
+
+/* Active state: Fade in and move to original position */
+.active.animate-children>*,
+.active .animate-children>* {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Automatic staggered delays for children */
+.active .animate-children>*:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.active .animate-children>*:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.active .animate-children>*:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.active .animate-children>*:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.active .animate-children>*:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.active .animate-children>*:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 :root {
     --bg-primary: #0a0a0a;
     --bg-secondary: #111111;
@@ -54,7 +104,7 @@ h6 {
     -webkit-text-fill-color: transparent;
 }
 
-.article-content p{
+.article-content p {
     font-weight: normal !important;
 }
 
@@ -281,12 +331,13 @@ h6 {
     padding: 0.375rem 0.875rem;
     background: rgba(249, 115, 22, 0.1);
     border-radius: 100px;
-    font-size: 0.80rem;
+    font-size: 0.7rem;
     font-weight: normal;
     color: var(--accent-primary);
     margin-bottom: 1rem;
     border: 1px solid #ffa42452;
     gap: 8px;
+    text-transform: uppercase;
 }
 
 .section-tag::before {
@@ -595,8 +646,8 @@ h6 {
     padding-top: 4rem;
 }
 
-.footer-section{
-    background-color:#111111;
+.footer-section {
+    background-color: #111111;
 }
 
 .footer-logo {
